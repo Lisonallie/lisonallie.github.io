@@ -2,12 +2,14 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./components/Notes.jsx";
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <h1 className = "display-1">
+      Hello World!
+    </h1>
   );
 }
 
