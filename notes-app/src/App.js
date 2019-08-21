@@ -1,29 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import "./components/Notes.jsx";
-import 'bootstrap/dist/css/bootstrap.css';
-import '../node_modules/'
-import axios from 'axios';
-
+import "bootstrap/dist/css/bootstrap.css";
+import axios from "axios";
 
 function App() {
-  componentDidMount() {
-    axios.get('http://localhost:4567/becode-database-api/list_note.php')
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-  }
-   
+  axios({
+    method: "get",
+    url: "http://localhost:4567/becode-database-api/list_note.php"
+  }).then(function(response) {
+    // location in the api response where the translation lives.
+    console.log(response.data);
+  });
 
   return (
     <div>
-      <p>
-
-      </p>
+      <p />
     </div>
   );
 }

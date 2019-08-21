@@ -1,14 +1,11 @@
 import React from 'react';
 
-class List extends Component {
-    state = {  }
-    render() { 
+function List() {
         return ( 
             <div>
                 <h1>Hello World!</h1>
             </div>
          );
     }
-}
  
 export default List;
