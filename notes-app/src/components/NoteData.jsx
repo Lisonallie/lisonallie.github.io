@@ -11,11 +11,11 @@ const NoteData = () => {
       setNote(response.data[0]);
     });
   });
-  const listItems = note.map((note) => <li key={note.author}>{[note.author]}</li>);
+  const listTitles = note.map((note) => <li key={note.title}>{note.title}</li>);
   
   return (
     <div>
-      <ul>{listItems}</ul>
+      <ul>{listTitles}</ul>
     </div>
   );
 };
