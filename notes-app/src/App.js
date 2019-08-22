@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import List from './components/Notes';
+import NoteData from './components/NoteData';
 
 function App() {
 
   return (
     <div>
-      <List />
+      <NoteData />
     </div>
   );
 }
