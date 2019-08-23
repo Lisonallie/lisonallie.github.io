@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+.noteTitle {
+  margin: 10px auto;
+  list-style: none;
+  background: rgb(141, 166, 233);
+  padding: 10px;
+  display: table;
+  border-radius: 15px;
+  color: white;
+}
+.noteTitle:hover {
+  cursor: pointer;
+  padding-left: 13px;
+  padding-right: 13px;
+  background: rgb(106, 129, 194);
+}
