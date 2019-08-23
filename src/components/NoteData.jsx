@@ -16,30 +16,26 @@ const NoteData = () => {
   }, []);
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
 
-  let key = "";
-
+  
   let openNote = () => {
     setOpen(open => !open);
-    open ? key = "text_entry" : key = "titles";
-  };
-
-  console.log(titles);
+    console.log(open);    
+    // open ? key = titles.text_entry : key = titles.title;
+  }; 
   
-  let listTitles = titles.map(titles => (
-    // console.log(titles);
-    
-    /*return (*/<li className="noteTitles" key={titles.key}>
-    {titles.key}
-    </li>
-  ));
-  
-  return (
+  let listTitles = titles.map((titles, index) => {   
+    return (
     <div className="noteContainer">
       <ul onClick={openNote} className="titlesList">
-        {listTitles}
+      <li className="noteTitles" key={index}>
+    {titles.title}
+    </li>
       </ul>
-    </div>
+    </div> 
+  ); 
+  });
+  return (
+    {listTitles}
   );
-
-};
+}
 export default NoteData;
