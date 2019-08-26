@@ -17,31 +17,29 @@ const NoteData = () => {
   }, []);
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
 
-  const buttons =
-  <React.Fragment>
-    <button className="btn btn-info">
-      Edit
-    </button>
-    <button className="btn btn-danger">
-      Delete
-    </button>
-  </React.Fragment>
+  const buttons = (
+    <React.Fragment>
+      <button className="btn btn-info edit">Edit</button>
+      <button className="btn btn-danger delete">Delete</button>
+    </React.Fragment>
+  );
 
   let openNote = () => {
     setOpen(open => !open);
-
   };
 
   const listNotes = titles.map(note => (
-    <li className="noteTitles" key={note.title}>
-      {open ? note.title : note.text_entry}
-      {buttons}
-    </li>
+    <React.Fragment>
+      <li className="noteTitles" onClick={openNote} key={note.title}>
+        {open ? note.title : note.text_entry}
+      </li>
+      <div>{buttons}</div>
+    </React.Fragment>
   ));
 
   return (
     <div>
-      <ul onClick={openNote} className="titlesList">
+      <ul className="titlesList">
         {listNotes}
       </ul>
     </div>
