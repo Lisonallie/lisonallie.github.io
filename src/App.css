@@ -32,7 +32,7 @@
   }
 }
 
-.noteTitle {
+.noteTitles {
   margin: 10px auto;
   list-style: none;
   background: rgb(141, 166, 233);
@@ -41,7 +41,7 @@
   border-radius: 15px;
   color: white;
 }
-.noteTitle:hover {
+.noteTitles:hover {
   cursor: pointer;
   padding-left: 13px;
   padding-right: 13px;

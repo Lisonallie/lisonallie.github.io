@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
   const [open, setOpen] = useState(false);
+
   // titles = SHOW titles & setTitles = GET titles/give value to first titles declaration
   useEffect(() => {
     axios({
@@ -16,26 +17,23 @@ const NoteData = () => {
   }, []);
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
 
-  
   let openNote = () => {
     setOpen(open => !open);
-    console.log(open);    
-    // open ? key = titles.text_entry : key = titles.title;
-  }; 
-  
-  let listTitles = titles.map((titles, index) => {   
-    return (
-    <div className="noteContainer">
-      <ul onClick={openNote} className="titlesList">
-      <li className="noteTitles" key={index}>
-    {titles.title}
+  };
+
+  const listNotes = titles.map(note => (
+    <li className="noteTitles" key={note.title}>
+      {open ? note.title : note.text_entry}
     </li>
-      </ul>
-    </div> 
-  ); 
-  });
+  ));
+
   return (
-    {listTitles}
+    <div>
+      <ul onClick={openNote} className="titlesList">
+        {listNotes}
+      </ul>
+    </div>
   );
-}
+};
+
 export default NoteData;
