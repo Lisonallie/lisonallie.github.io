@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   // titles = SHOW titles & setTitles = GET titles/give value to first titles declaration
   useEffect(() => {
@@ -19,6 +19,18 @@ const NoteData = () => {
 
   let openNote = () => {
     setOpen(open => !open);
+    if(open) {
+      return (
+        <React.Fragment>
+          <button>
+            
+          </button>
+          <button>
+
+          </button>
+        </React.Fragment>
+      )
+    }
   };
 
   const listNotes = titles.map(note => (
