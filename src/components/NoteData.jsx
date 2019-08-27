@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import EditData from './EditData';
+import useModal from '../useModal';
+import Modal from '../Modal';
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
@@ -21,7 +23,7 @@ const NoteData = () => {
 
   const buttons = (
     <React.Fragment>
-      <button onClick={toggle} style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
+      <button onClick={toggle} onSubmit={EditData} style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
       <Modal
         isShowing={isShowing}
         hide={toggle}
