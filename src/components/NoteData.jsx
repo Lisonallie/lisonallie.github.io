@@ -19,18 +19,13 @@ const NoteData = () => {
 
   const buttons = (
     <React.Fragment>
-      <button className="btn btn-info edit">Edit</button>
-      <button className="btn btn-danger delete">Delete</button>
+      <button style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
+      <button style={{display: open ? 'none' : 'inline' }} className="btn btn-danger delete">Delete</button>
     </React.Fragment>
   );
-
-  const buttonStyle = () => {
-    display: buttons ? "none" :"block";
-  }
   
   let openNote = () => {
     setOpen(open => !open);
-    {buttonStyle}
   };
 
   const listNotes = titles.map(note => (
