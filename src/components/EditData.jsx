@@ -6,6 +6,7 @@ import Modali, { useModali } from 'modali';
 
 //rfce
 const EditData = () => {
+    const [modal, toggleModal] = useModali();
 
     useEffect(() => {
     axios({
@@ -13,7 +14,7 @@ const EditData = () => {
       url: `http://localhost:4567/becode-database-api/update_note.php/`
       // ?text=${text}&newtext=${newText}
     }).then(response => {
-      console.log(response);
+      console.log("hello" + response);
       
     });
   }, []);
