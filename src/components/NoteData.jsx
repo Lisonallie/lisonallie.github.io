@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
-import EditData from './EditData';
-import useModal from '../useModal';
-import Modal from '../Modal';
+import EditData from "./EditData";
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
@@ -19,19 +17,26 @@ const NoteData = () => {
     });
   }, []);
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
-  const {isShowing, toggle} = useModal();
 
   const buttons = (
     <React.Fragment>
-      <button onClick={toggle} onSubmit={EditData} style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
-      <Modal
-        isShowing={isShowing}
-        hide={toggle}
-      />
-      <button style={{display: open ? 'none' : 'inline' }} className="btn btn-danger delete">Delete</button>
+      <button
+        /*onClick={toggle} onSubmit={EditData}*/ style={{
+          display: open ? "none" : "inline"
+        }}
+        className="btn btn-info edit"
+      >
+        Edit
+      </button>
+      <button
+        style={{ display: open ? "none" : "inline" }}
+        className="btn btn-danger delete"
+      >
+        Delete
+      </button>
     </React.Fragment>
   );
-  
+
   let openNote = () => {
     setOpen(open => !open);
   };
@@ -47,9 +52,7 @@ const NoteData = () => {
 
   return (
     <div>
-      <ul className="titlesList">
-        {listNotes}
-      </ul>
+      <ul className="titlesList">{listNotes}</ul>
     </div>
   );
 };
