@@ -17,10 +17,15 @@ const NoteData = () => {
     });
   }, []);
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
+  const {isShowing, toggle} = useModal();
 
   const buttons = (
     <React.Fragment>
-      <button onClick={EditData} style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
+      <button onClick={toggle} style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
+      <Modal
+        isShowing={isShowing}
+        hide={toggle}
+      />
       <button style={{display: open ? 'none' : 'inline' }} className="btn btn-danger delete">Delete</button>
     </React.Fragment>
   );
