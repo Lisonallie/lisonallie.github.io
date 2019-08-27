@@ -24,8 +24,13 @@ const NoteData = () => {
     </React.Fragment>
   );
 
+  const buttonStyle = () => {
+    display: buttons ? "none" :"block";
+  }
+  
   let openNote = () => {
     setOpen(open => !open);
+    {buttonStyle}
   };
 
   const listNotes = titles.map(note => (
