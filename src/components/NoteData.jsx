@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
+import EditData from './EditData';
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
@@ -19,7 +20,7 @@ const NoteData = () => {
 
   const buttons = (
     <React.Fragment>
-      <button style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
+      <button onClick={EditData} style={{display: open ? 'none' : 'inline' }} className="btn btn-info edit">Edit</button>
       <button style={{display: open ? 'none' : 'inline' }} className="btn btn-danger delete">Delete</button>
     </React.Fragment>
   );
