@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 //imrc
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
+import Modali, { useModali } from 'modali';
 
 //rfce
 const EditData = () => {
