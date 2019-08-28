@@ -22,28 +22,36 @@ const NoteData = () => {
   let openNote = () => {
     setOpen(open => !open);
     console.log(open);
-    
   };
 
   const listNotes = titles.map(note => (
     <React.Fragment>
-      <li onMouseOver={openNote} className="card-body noteTitles m-3" key={note.title}>
-        {open ? note.text_entry : note.title }
+      <li
+        onMouseOver={openNote}
+        className="card-body noteTitles m-3"
+        key={note.title}
+      >
+        {open ? note.text_entry : note.title}
       </li>
     </React.Fragment>
   ));
 
   return (
     <React.Fragment>
-      <div className="create">
+      <div className="createEditDelete">
         <button className="btn btn-success">Create Note</button>
-      <div className="editDeleteDiv" style={{ display: open ? "block" : "none" }}>
-        <EditData />
-        <DeleteData />
-      </div>
+        <div
+          className="editDeleteDiv"
+          style={{ display: open ? "block" : "none" }}
+        >
+          <EditData />
+          <DeleteData />
+        </div>
       </div>
       <div className="card-deck">
-        <div id="notesParent" className="card titlesList">{listNotes}</div>
+        <div id="notesParent" className="card titlesList">
+          {listNotes}
+        </div>
       </div>
     </React.Fragment>
   );

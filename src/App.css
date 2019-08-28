@@ -1,7 +1,8 @@
-.create {
+.createEditDelete {
   display: inline-flex;
-  margin-left: 3%;
+  margin-left: 37%;
   margin-top: 20px;
+
 }
 
 #notesParent {
@@ -16,7 +17,7 @@
   background: rgb(141, 166, 233);
   border-radius: 15px;
   color: white;
-  width: 300px;
+  width: 200px;
   height: 250px;
 }
 .noteTitles:hover {
@@ -27,13 +28,6 @@
 .titlesList {
   text-align: center;
 }
-
-.edit, .delete {
-  margin-left: 35px;
-  margin-right: 35px;
-  left: 50%;
-  list-style: none;
-} 
 
 .editTitle {
   text-align: center;
