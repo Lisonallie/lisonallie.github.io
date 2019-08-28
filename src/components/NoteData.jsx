@@ -19,11 +19,12 @@ const NoteData = () => {
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
 
   const editButton = (
-    <React.Fragment>
-      <button onClick={console.log("openModal")} style={{display: open ? "none" : "inline"}} className="btn btn-info edit">
-        Edit
-      </button>
-    </React.Fragment>
+    <button
+    onClick={ e => e.stopPropagation() }
+      style={{ display: open ? "none" : "inline" }}
+      className="btn btn-info edit">
+      Edit
+    </button>
   );
 
   // const deleteButton = (
@@ -40,7 +41,7 @@ const NoteData = () => {
 
   const listNotes = titles.map(note => (
     <React.Fragment>
-      <li className="noteTitles" onClick={openNote} key={note.title}>
+      <li className="noteTitles" onMouseOver={openNote} key={note.title}>
         {open ? note.title : note.text_entry}
       </li>
       <div>{editButton}</div>
