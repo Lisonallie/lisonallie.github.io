@@ -39,7 +39,7 @@ const NoteData = () => {
   return (
     <React.Fragment>
       <div className="createEditDelete">
-        <button className="btn btn-success">Create Note</button>
+        <CreateNote />
         <div
           className="editDeleteDiv"
           style={{ display: open ? "block" : "none" }}
