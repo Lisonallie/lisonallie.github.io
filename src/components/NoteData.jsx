@@ -19,14 +19,6 @@ const NoteData = () => {
   }, []);
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
 
-  // const deleteButton = (
-  //   <React.Fragment>
-  //     <button style={{display: open ? "none" : "inline"}} className="btn btn-danger delete">
-  //       Delete
-  //     </button>
-  //   </React.Fragment>
-  // );
-
   let openNote = () => {
     setOpen(open => !open);
   };

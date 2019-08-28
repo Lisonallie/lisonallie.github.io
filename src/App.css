@@ -66,6 +66,11 @@
   font-size: 30px;
 }
 
+.deleteTitle {
+  text-align: center;
+  font-size: 30px;
+}
+
 .inputTitle, .inputText {
   text-align: center;
   padding: 8px;

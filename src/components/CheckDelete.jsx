@@ -5,6 +5,15 @@ import React from "react";
 const CheckDelete = () => {
   const [deleteTitle, setDeleteTitle] = useState("");
 
+  const cancelDelete = () => {
+    axios({
+      method: "get",
+      url: `http://localhost:4567/becode-database-api/delete_note.php/`
+    }).then(response => {
+      console.log(response);
+    });
+  };
+
   const handleDelete = () => {
     axios({
       method: "get",
@@ -14,6 +23,14 @@ const CheckDelete = () => {
     });
   };
 
+  const warning = () => {
+    const confirmation = window.confirm("Are you sure you want to delete this note?");
+    if (confirmation === true) {
+      handleDelete();
+    } else {
+      cancelDelete();
+    }
+  };
   return (
     <React.Fragment>
       <div className="inputHolder">
@@ -26,8 +43,9 @@ const CheckDelete = () => {
           onChange={e => setDeleteTitle(e.target.value)}
           placeholder="Title of note you want to delete"
         ></input>
-        <button onClick={handleDelete} className="btn btn-secondary submit">
-          Submit
+        <br></br>
+        <button onClick={warning} className="btn btn-warning submit">
+          Delete
         </button>
       </div>
     </React.Fragment>
