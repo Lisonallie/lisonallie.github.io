@@ -8,6 +8,7 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
+  border: none;
 }
 
 .noteTitles {
@@ -23,14 +24,10 @@
   background: rgb(184, 203, 253);
 }
 
-/* .titlesList {
+.titlesList {
   text-align: center;
-} */
-
-/* .editDeleteDiv {
-  margin-top: -38.5px;
 }
-*/
+
 .edit, .delete {
   margin-left: 35px;
   margin-right: 35px;
