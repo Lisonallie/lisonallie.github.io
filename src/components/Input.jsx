@@ -10,9 +10,9 @@ const Input = () => {
   const handleSubmit = () => {
         axios({
           method: "get",
-          url: `http://localhost:4567/becode-database-api/update_note.php/?text=${title}&newtext=${newText}`
+          url: `http://localhost:4567/becode-database-api/update_note.php/?title=${title}&newtext=${newText}`
         }).then(response => {
-            console.log(response.config);
+            console.log(response);
         });
     }
 
