@@ -16,7 +16,7 @@ const Input = () => {
 
   return (
     <React.Fragment>
-      <div>
+      <div className="inputHolder">
         <input
           className="inputTitle"
           value={title}
