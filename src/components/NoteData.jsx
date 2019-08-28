@@ -6,7 +6,7 @@ import DeleteData from "./DeleteData";
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   // titles = SHOW titles & setTitles = GET titles/give value to first titles declaration
   useEffect(() => {
@@ -16,26 +16,36 @@ const NoteData = () => {
     }).then(response => {
       setTitles(response.data[0]);
     });
-  }, []);
+  });
   //^^^^^add the array there to stop the response.data from repeating WAY TOO MANY TIMES
 
   let openNote = () => {
     setOpen(open => !open);
+    console.log(open);
+    
   };
 
   const listNotes = titles.map(note => (
     <React.Fragment>
-      <li className="noteTitles" onMouseOver={openNote} key={note.title}>
-        {open ? note.title : note.text_entry}
+      <li onMouseOver={openNote} className="card-body noteTitles m-3" key={note.title}>
+        {open ? note.text_entry : note.title }
       </li>
-      <div style={{ display: open ? "none" : "inline" }}><EditData/><DeleteData /></div>
     </React.Fragment>
   ));
 
   return (
-    <div>
-      <ul className="titlesList">{listNotes}</ul>
-    </div>
+    <React.Fragment>
+      <div className="create">
+        <button className="btn btn-success">Create Note</button>
+      <div className="editDeleteDiv" style={{ display: open ? "block" : "none" }}>
+        <EditData />
+        <DeleteData />
+      </div>
+      </div>
+      <div className="card-deck">
+        <div id="notesParent" className="card titlesList">{listNotes}</div>
+      </div>
+    </React.Fragment>
   );
 };
 
