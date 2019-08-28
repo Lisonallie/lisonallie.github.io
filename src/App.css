@@ -61,6 +61,8 @@
 
 .inputTitle, .inputText {
   text-align: center;
+  padding: 8px;
+  width: 70%;
 }
 
 .inputHolder {
