@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import React from "react";
 
@@ -6,12 +6,16 @@ const Input = () => {
   const [title, setTitle] = useState(""); // '' is the initial state value
   const [newText, setNewText] = useState("");
 
-  useEffect((title, newText) => {
-    axios({
-      method: "get",
-      url: `http://localhost:4567/becode-database-api/update_note.php/?text=${title}&newtext=${newText}`
-    }).then(response => {});
-  }, []);
+  
+  const handleSubmit = () => {
+        axios({
+          method: "get",
+          url: `http://localhost:4567/becode-database-api/update_note.php/?text=${title}&newtext=${newText}`
+        }).then(response => {
+            console.log(response.config);
+        });
+    }
+
 
   return (
     <React.Fragment>
@@ -32,7 +36,7 @@ const Input = () => {
           onChange={e => setNewText(e.target.value)}
           placeholder="New text to be inserted"
         ></input><br></br>
-        <button className="btn btn-secondary submit">Submit</button>
+        <button onClick={handleSubmit} className="btn btn-secondary submit">Submit</button>
       </div>
     </React.Fragment>
   );
