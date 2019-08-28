@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import EditData from "./EditData";
+import DeleteData from "./DeleteData";
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
@@ -35,7 +36,7 @@ const NoteData = () => {
       <li className="noteTitles" onMouseOver={openNote} key={note.title}>
         {open ? note.title : note.text_entry}
       </li>
-      <div style={{ display: open ? "none" : "inline" }}><EditData/></div>
+      <div style={{ display: open ? "none" : "inline" }}><EditData/><DeleteData /></div>
     </React.Fragment>
   ));
 
