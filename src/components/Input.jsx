@@ -2,16 +2,16 @@ import { useState } from "react";
 import React from "react";
 
 const Input = () => {
-  const [text, setText] = useState(""); // '' is the initial state value
+  const [title, setTitle] = useState(""); // '' is the initial state value
   const [newText, setNewText] = useState("");
 
   return (
     <div>
       <input
-        value={text}
-        onInput={e => setText(e.target.value)}
+        value={title}
+        onInput={e => setTitle(e.target.value)}
         className="inputText"
-        placeholder="Text you want to change"
+        placeholder="Title of note you want to change"
       ></input>
       <input
         value={newText}
@@ -22,3 +22,5 @@ const Input = () => {
     </div>
   );
 };
+
+export default Input;
