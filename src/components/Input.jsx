@@ -10,13 +10,13 @@ const Input = () => {
     axios({
       method: "get",
       url: `http://localhost:4567/becode-database-api/update_note.php/?text=${title}&newtext=${newText}`
-    }).then(response => {
-    });
+    }).then(response => {});
   }, []);
 
   return (
     <React.Fragment>
       <div className="inputHolder">
+        <span className="editTitle">Edit Note</span><br></br><br></br>
         <input
           className="inputTitle"
           value={title}
@@ -31,7 +31,8 @@ const Input = () => {
           value={newText}
           onChange={e => setNewText(e.target.value)}
           placeholder="New text to be inserted"
-        ></input>
+        ></input><br></br>
+        <button className="btn btn-secondary submit">Submit</button>
       </div>
     </React.Fragment>
   );

@@ -59,6 +59,11 @@
   list-style: none;
 }
 
+.editTitle {
+  text-align: center;
+  font-size: 30px;
+}
+
 .inputTitle, .inputText {
   text-align: center;
   padding: 8px;
@@ -69,6 +74,10 @@
   margin: 0 auto;
   text-align: center;
   
+}
+
+.submit {
+  margin-top: 30px;
 }
 
 .forPadding {
