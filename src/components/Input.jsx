@@ -25,7 +25,7 @@ const Input = () => {
         ></input>
       </div>
       <br></br>
-      <div>
+      <div className="inputHolder">
         <input
           className="inputText"
           value={newText}

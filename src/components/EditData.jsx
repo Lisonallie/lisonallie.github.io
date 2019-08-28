@@ -14,7 +14,7 @@ const EditData = () => {
         EDIT
       </button>
       <Modali.Modal {...modal}>
-        <div>
+        <div className="forPadding">
           <Input />
         </div>
       </Modali.Modal>
