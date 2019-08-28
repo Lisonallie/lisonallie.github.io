@@ -2,44 +2,57 @@ import { useState } from "react";
 import axios from "axios";
 import React from "react";
 
-const Input = () => {
+const CreateInput = () => {
   const [title, setTitle] = useState(""); // '' is the initial state value
-  const [newText, setNewText] = useState("");
+  const [author, setAuthor] = useState("");
+  const [text, setText] = useState("");
 
-  
-  const handleSubmit = () => {
-        axios({
-          method: "get",
-          url: `http://localhost:4567/becode-database-api/update_note.php/?title=${title}&newtext=${newText}`
-        }).then(response => {
-            console.log(response);
-        });
-    }
-
+  const handleCreate = () => {
+    axios({
+      method: "get",
+      url: `http://localhost:4567/becode-database-api/create_note.php/?title=${title}&author=${author}`
+    }).then(response => {
+      console.log(response);
+    });
+  };
 
   return (
     <React.Fragment>
       <div className="inputHolder">
-        <span className="editTitle">Edit Note</span><br></br><br></br>
+        <span className="editTitle">Create New Note</span>
+        <br></br>
+        <br></br>
         <input
           className="inputTitle"
           value={title}
           onChange={e => setTitle(e.target.value)}
-          placeholder="Title of note you want to change"
+          placeholder="Title"
         ></input>
       </div>
       <br></br>
       <div className="inputHolder">
         <input
           className="inputText"
-          value={newText}
-          onChange={e => setNewText(e.target.value)}
-          placeholder="New text to be inserted"
-        ></input><br></br>
-        <button onClick={handleSubmit} className="btn btn-secondary submit">Submit</button>
+          value={author}
+          onChange={e => setAuthor(e.target.value)}
+          placeholder="Author"
+        ></input>
+        <br></br><br></br>
+        <div className="inputHolder">
+          <input
+            className="inputText"
+            value={text}
+            onChange={e => setText(e.target.value)}
+            placeholder="Content"
+          ></input>
+          <br></br>
+        </div>
+        <button onClick={handleCreate} className="btn btn-success submit">
+          Create
+        </button>
       </div>
     </React.Fragment>
   );
 };
 
-export default Input;
+export default CreateInput;

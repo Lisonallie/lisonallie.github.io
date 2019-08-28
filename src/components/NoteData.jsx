@@ -3,6 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import EditData from "./EditData";
 import DeleteData from "./DeleteData";
+import CreateNote from "./CreateNote";
 
 const NoteData = () => {
   const [titles, setTitles] = useState([]);
@@ -21,7 +22,6 @@ const NoteData = () => {
 
   let openNote = () => {
     setOpen(open => !open);
-    console.log(open);
   };
 
   const listNotes = titles.map(note => (

@@ -5,16 +5,21 @@ import Modali, { useModali } from "modali";
 import CreateInput from "./CreateInput";
 
 //rfce
-const EditData = () => {
+const CreateNote = () => {
   const [modal, toggleModal] = useModali();
 
   return (
     <React.Fragment>
-      <button className="btn btn-info edit" onClick={toggleModal}>
+      <button className="btn btn-success edit" onClick={toggleModal}>
         Create Note
       </button>
       <Modali.Modal {...modal}>
         <div className="forPadding">
-          <Input />
+          <CreateInput />
         </div>
-      </Modali.Mo
+      </Modali.Modal>
+    </React.Fragment>
+  );
+};
+
+export default CreateNote;
