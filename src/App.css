@@ -1,10 +1,8 @@
 .createEditDelete {
   display: inline-flex;
-  margin-left: 45%;
-  margin-right: 45%;
   width: 100%;
   margin-top: 20px;
-
+  justify-content: space-around;
 }
 
 #notesParent {

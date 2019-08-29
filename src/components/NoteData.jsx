@@ -37,16 +37,13 @@ const NoteData = () => {
   ));
 
   return (
+    // style={{ display: open ? "block" : "none" }}
+    // ^^^ for future reference on how to do this vvv
     <React.Fragment>
       <div className="createEditDelete">
         <CreateNote />
-        <div
-          className="editDeleteDiv"
-          style={{ display: open ? "block" : "none" }}
-        >
-          <EditData />
-          <DeleteData />
-        </div>
+        <EditData />
+        <DeleteData />
       </div>
       <div className="card-deck">
         <div id="notesParent" className="card titlesList">
