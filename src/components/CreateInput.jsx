@@ -8,9 +8,12 @@ const CreateInput = () => {
   const [text, setText] = useState("");
 
   const handleCreate = () => {
+    let data = new URLSearchParams();
+    data.append("text", text);
     axios({
-      method: "get",
-      url: `http://localhost:4567/becode-database-api/create_note.php/?title=${title}&author=${author}`
+      method: "POST",
+      url: `http://localhost:4567/becode-database-api/create_note.php/?title=${title}&author=${author}`,
+      data: data
     }).then(response => {
       console.log(response);
     });
@@ -37,16 +40,20 @@ const CreateInput = () => {
           onChange={e => setAuthor(e.target.value)}
           placeholder="Author"
         ></input>
-        <br></br><br></br>
-        <div className="inputHolder">
-          <input
-            className="inputText"
-            value={text}
-            onChange={e => setText(e.target.value)}
-            placeholder="Content"
-          ></input>
-          <br></br>
-        </div>
+        <br></br>
+        <br></br>
+        <form method="POST">
+          <div className="inputHolder">
+            <input
+              formMethod="POST"
+              className="inputText"
+              value={text}
+              onChange={e => setText(e.target.value)}
+              placeholder="Content"
+            ></input>
+            <br></br>
+          </div>
+        </form>
         <button onClick={handleCreate} className="btn btn-success submit">
           Create
         </button>
