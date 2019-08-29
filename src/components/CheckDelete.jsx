@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import React from "react";
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const CheckDelete = () => {
   const [deleteTitle, setDeleteTitle] = useState("");
@@ -45,7 +47,7 @@ const CheckDelete = () => {
         ></input>
         <br></br>
         <button onClick={warning} className="btn btn-warning submit">
-          Delete
+          <FontAwesomeIcon icon={faTrashAlt} /> Delete
         </button>
       </div>
     </React.Fragment>

@@ -3,6 +3,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Modali, { useModali } from "modali";
 import CreateInput from "./CreateInput";
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 //rfce
 const CreateNote = () => {
@@ -11,7 +13,7 @@ const CreateNote = () => {
   return (
     <React.Fragment>
       <button className="btn btn-success edit" onClick={toggleModal}>
-        Create Note
+        <FontAwesomeIcon icon={faPlusSquare} /> Create Note
       </button>
       <Modali.Modal {...modal}>
         <div className="forPadding">
