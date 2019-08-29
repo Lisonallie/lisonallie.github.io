@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
+
 .createEditDelete {
   display: inline-flex;
   width: 100%;
@@ -16,13 +19,23 @@
   list-style: none;
   background: rgb(141, 166, 233);
   border-radius: 15px;
-  color: white;
+  color: rgb(72, 104, 192);
   width: 200px;
-  height: 250px;
+  height: 300px;
+  font-size: 120%;
+  font-family: 'Manjari', sans-serif;
 }
 .noteTitles:hover {
   cursor: pointer;
   background: rgb(184, 203, 253);
+}
+
+#noteAuthors {
+  font-size: 110%;
+  font-family: 'Allura', cursive;
+  font-variant: none;
+  color: white;
+  list-style: none;
 }
 
 .titlesList {

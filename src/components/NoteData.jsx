@@ -25,20 +25,23 @@ const NoteData = () => {
   };
 
   const listNotes = titles.map(note => (
-    <React.Fragment>
+    <React.Fragment key={note.id}>
       <li
         onMouseOver={openNote}
-        className="card-body noteTitles m-3"
+        onMouseLeave={openNote}
+        className="card-body overflow-auto noteTitles m-3"
         key={note.title}
+        style={{ fontVariant: open ? "none" : "small-caps" }}
       >
         {open ? note.text_entry : note.title}
+          <div id="noteAuthors" key={note.author}>
+            {open ? null : note.author}
+          </div>
       </li>
     </React.Fragment>
   ));
 
   return (
-    // style={{ display: open ? "block" : "none" }}
-    // ^^^ for future reference on how to do this vvv
     <React.Fragment>
       <div className="createEditDelete">
         <CreateNote />

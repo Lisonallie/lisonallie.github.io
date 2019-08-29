@@ -15,7 +15,6 @@ const CreateInput = () => {
       url: `http://localhost:4567/becode-database-api/create_note.php/?title=${title}&author=${author}`,
       data: data
     }).then(response => {
-      console.log(response);
     });
   };
 
