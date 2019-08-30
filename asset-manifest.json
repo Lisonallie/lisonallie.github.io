@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.cca61adf.chunk.css",
-    "main.js": "/static/js/main.daa51dad.chunk.js",
-    "main.js.map": "/static/js/main.daa51dad.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.cfe52ab7.js",
-    "runtime~main.js.map": "/static/js/runtime~main.cfe52ab7.js.map",
-    "static/css/2.32b582d1.chunk.css": "/static/css/2.32b582d1.chunk.css",
-    "static/js/2.8d0a2980.chunk.js": "/static/js/2.8d0a2980.chunk.js",
-    "static/js/2.8d0a2980.chunk.js.map": "/static/js/2.8d0a2980.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.cbf67ba35031521c3ef5e468d2a93214.js": "/precache-manifest.cbf67ba35031521c3ef5e468d2a93214.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.32b582d1.chunk.css.map": "/static/css/2.32b582d1.chunk.css.map",
-    "static/css/main.cca61adf.chunk.css.map": "/static/css/main.cca61adf.chunk.css.map",
-    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/note-app-front-end/static/css/main.cca61adf.chunk.css",
+    "main.js": "/note-app-front-end/static/js/main.420b3bc7.chunk.js",
+    "main.js.map": "/note-app-front-end/static/js/main.420b3bc7.chunk.js.map",
+    "runtime~main.js": "/note-app-front-end/static/js/runtime~main.17ec1787.js",
+    "runtime~main.js.map": "/note-app-front-end/static/js/runtime~main.17ec1787.js.map",
+    "static/css/2.ea5966e1.chunk.css": "/note-app-front-end/static/css/2.ea5966e1.chunk.css",
+    "static/js/2.8d0a2980.chunk.js": "/note-app-front-end/static/js/2.8d0a2980.chunk.js",
+    "static/js/2.8d0a2980.chunk.js.map": "/note-app-front-end/static/js/2.8d0a2980.chunk.js.map",
+    "index.html": "/note-app-front-end/index.html",
+    "precache-manifest.a24fb0af2fc5ac66502d2daa8534fc10.js": "/note-app-front-end/precache-manifest.a24fb0af2fc5ac66502d2daa8534fc10.js",
+    "service-worker.js": "/note-app-front-end/service-worker.js",
+    "static/css/2.ea5966e1.chunk.css.map": "/note-app-front-end/static/css/2.ea5966e1.chunk.css.map",
+    "static/css/main.cca61adf.chunk.css.map": "/note-app-front-end/static/css/main.cca61adf.chunk.css.map",
+    "static/media/font-awesome.min.css": "/note-app-front-end/static/media/fontawesome-webfont.fee66e71.woff"
   }
 }
